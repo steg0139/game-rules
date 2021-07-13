@@ -1,14 +1,14 @@
 import React from 'react';
 
-const ArtistsList = () => {
+const HandFootScores = () => {
   return (
       <React.Fragment>
         {(
-            <div className="artists">
+            <div className="hand-foot-scores">
               Hello artists
             </div>
         )}
       </React.Fragment>
   );
 };
-export default ArtistsList;
+export default HandFootScores;

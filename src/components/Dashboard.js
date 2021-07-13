@@ -3,7 +3,7 @@ import SearchResult from './SearchResult';
 import Header from './Header';
 
 const Dashboard = (props) => {
-  const [selectedCategory, setSelectedCategory] = useState('albums');
+  const [selectedCategory, setSelectedCategory] = useState('hand-foot-rules');
 
 
   const setCategory = (category) => {

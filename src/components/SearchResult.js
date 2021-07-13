@@ -1,7 +1,7 @@
 import React from 'react';
-import AlbumsList from './AlbumsList';
-import ArtistsList from './ArtistsList';
-import PlayList from './PlayList';
+import HandFootRules from './HandFootRules';
+import HandFootScores from './HandFootScores';
+import GinRummyRules from './GinRummyRules';
 
 const SearchResult = (props) => {
   const {setCategory, selectedCategory} = props;
@@ -12,9 +12,9 @@ const SearchResult = (props) => {
           {(
               <button
                   className={`${
-                      selectedCategory === 'albums' ? 'btn active' : 'btn'
+                      selectedCategory === 'hand-foot-rules' ? 'btn active' : 'btn'
                   }`}
-                  onClick={() => setCategory('albums')}
+                  onClick={() => setCategory('hand-foot-rules')}
               >
                 ✋ & 🦶 Rules
               </button>
@@ -22,9 +22,9 @@ const SearchResult = (props) => {
           {(
               <button
                   className={`${
-                      selectedCategory === 'artists' ? 'btn active' : 'btn'
+                      selectedCategory === 'hand-foot-scores' ? 'btn active' : 'btn'
                   }`}
-                  onClick={() => setCategory('artists')}
+                  onClick={() => setCategory('hand-foot-scores')}
               >
                 ✋ & 🦶 Scoring
               </button>
@@ -32,22 +32,22 @@ const SearchResult = (props) => {
           {(
               <button
                   className={`${
-                      selectedCategory === 'playlist' ? 'btn active' : 'btn'
+                      selectedCategory === 'gin-rummy-rules' ? 'btn active' : 'btn'
                   }`}
-                  onClick={() => setCategory('playlist')}
+                  onClick={() => setCategory('gin-rummy-rules')}
               >
                 🍸🥃 Rules
               </button>
           )}
         </div>
-        <div className={`${selectedCategory === 'albums' ? '' : 'hide'}`}>
-          <AlbumsList/>
+        <div className={`${selectedCategory === 'hand-foot-rules' ? '' : 'hide'}`}>
+          <HandFootRules/>
         </div>
-        <div className={`${selectedCategory === 'artists' ? '' : 'hide'}`}>
-          <ArtistsList/>
+        <div className={`${selectedCategory === 'hand-foot-scores' ? '' : 'hide'}`}>
+          <HandFootScores/>
         </div>
-        <div className={`${selectedCategory === 'playlist' ? '' : 'hide'}`}>
-          <PlayList/>
+        <div className={`${selectedCategory === 'gin-rummy-rules' ? '' : 'hide'}`}>
+          <GinRummyRules/>
         </div>
       </React.Fragment>
   );

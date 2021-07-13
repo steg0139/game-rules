@@ -1,15 +1,14 @@
 import React from 'react';
 
-const AlbumsList = () => {
+const GinRummyRules = () => {
   return (
       <React.Fragment>
         {(
-            <div className="albums">
-              Hello albums
+            <div className="gin-rummy-rules">
+              Hello playlist
             </div>
         )}
       </React.Fragment>
   );
 };
-
-export default AlbumsList;
+export default GinRummyRules;

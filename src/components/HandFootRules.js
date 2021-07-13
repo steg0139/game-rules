@@ -1,14 +1,15 @@
 import React from 'react';
 
-const PlayList = () => {
+const HandFootRules = () => {
   return (
       <React.Fragment>
         {(
-            <div className="playlist">
-              Hello playlist
+            <div className="hand-foot-rules">
+              Hello albums
             </div>
         )}
       </React.Fragment>
   );
 };
-export default PlayList;
+
+export default HandFootRules;
