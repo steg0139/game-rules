@@ -1,25 +1,32 @@
 import React from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faHandPointRight} from "@fortawesome/free-solid-svg-icons";
+import {HAND_AND_FOOT_RULES} from "../util/constants";
 
 const HandFootRules = () => {
-  const rules = [{title: 'Hello', subRules: ['Dogs', 'Cats']},
-    {title: 'Goodbye', subRules: ['frogs', 'kids']},
-    {title: 'Alligator', subRules: ['brokles', 'turtles']}]
 
   return (
       <React.Fragment>
-        {rules.map((rule, index) => {
-          return (
-              <React.Fragment key={index}>
-                <div className="hand-foot-rules">
+        <div className="hand-foot-rules">
+          {HAND_AND_FOOT_RULES.map((rule, index) => {
+            return (
+                <React.Fragment key={index}>
+                  <span className="title">{rule.title}</span>
                   <div className="rules-subsection">
-                    <FontAwesomeIcon className="rule-icon" icon={faHandPointRight}/>{rule.title}
+                    {rule.subRules.map((sub, subIndex) => {
+                      return (
+                          <React.Fragment key={subIndex}>
+                            <div className="rule">
+                              <FontAwesomeIcon className="rule-icon" icon={faHandPointRight}/>{sub}
+                            </div>
+                          </React.Fragment>
+                      );
+                    })}
                   </div>
-                </div>
-              </React.Fragment>
-          );
-        })}
+                </React.Fragment>
+            );
+          })}
+        </div>
       </React.Fragment>
   );
 };

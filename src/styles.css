@@ -11,7 +11,7 @@ body {
     background: #f3f4f6;
     font-family: 'Montserrat', -apple-system, system-ui, BlinkMacSystemFont,
     'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    font-size: 20px;
+    font-size: 16px;
     letter-spacing: 1px;
     color: #778298;
 }
@@ -67,16 +67,31 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
+    margin: 20px 200px;
 }
 
 .rules-subsection {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-bottom: 15px;
+}
+
+.rule {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     flex-direction: row;
+}
+
+.title {
+    font-size: 22px;
+    color: #545d6f;
 }
 
 .rule-icon {
@@ -117,7 +132,7 @@ body {
     box-shadow: none;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
     .search-buttons {
         flex-direction: column;
     }
@@ -129,5 +144,15 @@ body {
     }
     .main-heading {
         text-align: center;
+    }
+    .rule {
+        flex-wrap: nowrap;
+        align-items: baseline;
+        padding-bottom: 3px;
+    }
+    .hand-foot-rules,
+    .hand-foot-scores,
+    .gin-rummy-rules {
+        margin: 10px;
     }
 }
