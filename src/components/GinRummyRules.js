@@ -1,7 +1,7 @@
 import React from 'react';
 import {GIN_RUMMY_RULES} from "../util/constants";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faHandPointRight} from "@fortawesome/free-solid-svg-icons";
+import {faCocktail} from "@fortawesome/free-solid-svg-icons";
 
 const GinRummyRules = () => {
   return (
@@ -16,7 +16,7 @@ const GinRummyRules = () => {
                       return (
                           <React.Fragment key={subIndex}>
                             <div className="rule">
-                              <FontAwesomeIcon className="rule-icon" icon={faHandPointRight}/>{sub}
+                              <FontAwesomeIcon className="rule-icon" icon={faCocktail}/>{sub}
                             </div>
                           </React.Fragment>
                       );
