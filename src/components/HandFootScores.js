@@ -1,30 +1,64 @@
 import React from 'react';
-import {HAND_AND_FOOT_RULES} from "../util/constants";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faHandPointRight} from "@fortawesome/free-solid-svg-icons";
+import BTable from 'react-bootstrap/Table';
+import {COLUMNS, DATA} from "../util/constants";
+import { useTable } from "react-table";
+
 
 const HandFootScores = () => {
+  const data = React.useMemo(() => DATA, []);
+  const columns = React.useMemo(() => COLUMNS, []);
+  const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } = useTable({
+    columns,
+    data,
+  })
+
   return (
       <React.Fragment>
         <div className="hand-foot-scores">
-          {HAND_AND_FOOT_RULES.map((rule, index) => {
-            return (
-                <React.Fragment key={index}>
-                  <span className="title">{rule.title}</span>
-                  <div className="rules-subsection">
-                    {rule.subRules.map((sub, subIndex) => {
+          <BTable striped bordered hover size="sm" {...getTableProps()}>
+            <thead>
+            {headerGroups.map(headerGroup => (
+                <tr {...headerGroup.getHeaderGroupProps()}>
+                  {headerGroup.headers.map(column => (
+                      <th
+                          {...column.getHeaderProps()}
+                          style={{
+                            borderBottom: 'solid 3px red',
+                            background: 'aliceblue',
+                            color: 'black',
+                            fontWeight: 'bold',
+                          }}
+                      >
+                        {column.render('Header')}
+                      </th>
+                  ))}
+                </tr>
+            ))}
+            </thead>
+            <tbody {...getTableBodyProps()}>
+            {rows.map(row => {
+              prepareRow(row)
+              return (
+                  <tr {...row.getRowProps()}>
+                    {row.cells.map(cell => {
                       return (
-                          <React.Fragment key={subIndex}>
-                            <div className="rule">
-                              <FontAwesomeIcon className="rule-icon" icon={faHandPointRight}/>{sub}
-                            </div>
-                          </React.Fragment>
-                      );
+                          <td
+                              {...cell.getCellProps()}
+                              style={{
+                                padding: '10px',
+                                border: 'solid 1px gray',
+                                background: 'papayawhip',
+                              }}
+                          >
+                            {cell.render('Cell')}
+                          </td>
+                      )
                     })}
-                  </div>
-                </React.Fragment>
-            );
-          })}
+                  </tr>
+              )
+            })}
+            </tbody>
+          </BTable>
         </div>
       </React.Fragment>
   );

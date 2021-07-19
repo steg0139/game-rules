@@ -12,3 +12,29 @@ export const GIN_RUMMY_RULES =
       {title: 'Play', subRules: ['Begin your turn by taking one card from either the top of the stock pile or the top card on the discard pile.', 'Discard one card to end your turn', 'The first turn is slightly different - If the non dealer does not want the card that was flipped up, the dealer has the option to take that card and go first. If the dealer doesn\'t want it, the non dealer continues their turn.']},
       {title: 'Knocking', subRules: ['When you have less than 10 points in your deadwood, you can knock (indicated by placing your discard face down.', 'Knocking with no deadwood is called going gin and earns a bonus.', 'The opponent of the player who knocked lays their matched cards out and can lay off their cards if their opponent did not go gin.']},
       {title: 'Scoring', subRules: ['Each player counts their deadwood. If the knocker\'s count is lower, the knocker scores the difference.', 'If the knocker did not go gin, and the counts are equal or the knocker\'s count is greater, the knocker has been undercut. the non-knocking player gets the difference and a 10 point bonus.', 'If a player goes gin, they get a 20 point bonus plus the opponents deadwood count.', 'The game continues until one player\'s cumulative score reaches 100 points or more. This player then receives an additional bonus of 100 points. If the loser failed to score anything at all during the game, then the winner\'s bonus is 200 points rather than 100.', 'Each player adds a further 20 points for each hand they won. This is called the line bonus or box bonus. These additional points cannot be counted as part of the 100 needed to win the game.', 'The player with the highest score wins']}];
+
+export const DATA = [
+  {
+    col1: 'Hello',
+    col2: 'World',
+  },
+  {
+    col1: 'react-table',
+    col2: 'rocks',
+  },
+  {
+    col1: 'whatever',
+    col2: 'you want',
+  },
+];
+
+export const COLUMNS = [
+  {
+    Header: 'Column 1',
+    accessor: 'col1', // accessor is the "key" in the data
+  },
+  {
+    Header: 'Column 2',
+    accessor: 'col2',
+  },
+];
