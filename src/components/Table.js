@@ -14,9 +14,9 @@ const Table = ({table}) => {
                     <th
                         {...column.getHeaderProps()}
                         style={{
-                          borderBottom: 'solid 3px red',
-                          background: 'aliceblue',
-                          color: 'black',
+                          borderBottom: 'solid 3px #3e4552',
+                          background: '#e4e7eb',
+                          color: '#545d6f',
                           fontWeight: 'bold',
                         }}
                     >
@@ -38,7 +38,8 @@ const Table = ({table}) => {
                             style={{
                               padding: '10px',
                               border: 'solid 1px gray',
-                              background: 'papayawhip',
+                              background: '#f3f4f6',
+                              color: '#778298'
                             }}
                         >
                           {cell.render('Cell')}
