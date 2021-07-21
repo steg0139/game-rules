@@ -13,28 +13,100 @@ export const GIN_RUMMY_RULES =
       {title: 'Knocking', subRules: ['When you have less than 10 points in your deadwood, you can knock (indicated by placing your discard face down.', 'Knocking with no deadwood is called going gin and earns a bonus.', 'The opponent of the player who knocked lays their matched cards out and can lay off their cards if their opponent did not go gin.']},
       {title: 'Scoring', subRules: ['Each player counts their deadwood. If the knocker\'s count is lower, the knocker scores the difference.', 'If the knocker did not go gin, and the counts are equal or the knocker\'s count is greater, the knocker has been undercut. the non-knocking player gets the difference and a 10 point bonus.', 'If a player goes gin, they get a 20 point bonus plus the opponents deadwood count.', 'The game continues until one player\'s cumulative score reaches 100 points or more. This player then receives an additional bonus of 100 points. If the loser failed to score anything at all during the game, then the winner\'s bonus is 200 points rather than 100.', 'Each player adds a further 20 points for each hand they won. This is called the line bonus or box bonus. These additional points cannot be counted as part of the 100 needed to win the game.', 'The player with the highest score wins']}];
 
-export const DATA = [
+export const LAY_DATA = [
   {
-    col1: 'Hello',
-    col2: 'World',
+    col1: '0-2000',
+    col2: '50',
   },
   {
-    col1: 'react-table',
-    col2: 'rocks',
+    col1: '2001-4000',
+    col2: '90',
   },
   {
-    col1: 'whatever',
-    col2: 'you want',
+    col1: '4001-6000',
+    col2: '120',
   },
+  {
+    col1: '6001-8000',
+    col2: '150',
+  },
+  {
+    col1: '8001-10000',
+    col2: '180',
+  }
+];
+export const CARD_DATA = [
+  {
+    col1: '3-8',
+    col2: '5',
+  },
+  {
+    col1: '9-K',
+    col2: '10',
+  },
+  {
+    col1: 'A, 2',
+    col2: '20',
+  },
+  {
+    col1: 'Joker',
+    col2: '50',
+  },
+  {
+    col1: 'Red 3',
+    col2: '-500',
+  }
+];
+export const POINT_DATA = [
+  {
+    col1: 'Dirty Book',
+    col2: '300',
+  },
+  {
+    col1: 'Clean Book',
+    col2: '500',
+  },
+  {
+    col1: 'Wild Book',
+    col2: '1500',
+  },
+  {
+    col1: 'Perfect Deal',
+    col2: '100',
+  },
+  {
+    col1: 'Going Out',
+    col2: '100',
+  }
 ];
 
-export const COLUMNS = [
+export const LAY_COLUMNS = [
   {
-    Header: 'Column 1',
+    Header: 'Score',
     accessor: 'col1', // accessor is the "key" in the data
   },
   {
-    Header: 'Column 2',
+    Header: 'Points Needed',
+    accessor: 'col2',
+  },
+];
+export const CARD_COLUMNS = [
+  {
+    Header: 'Cards',
+    accessor: 'col1', // accessor is the "key" in the data
+  },
+  {
+    Header: 'Points',
+    accessor: 'col2',
+  },
+];
+export const POINT_COLUMNS = [
+  {
+    Header: 'Scoring',
+    accessor: 'col1', // accessor is the "key" in the data
+  },
+  {
+    Header: 'Points',
     accessor: 'col2',
   },
 ];

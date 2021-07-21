@@ -62,12 +62,19 @@ body {
 }
 
 .hand-foot-rules,
-.hand-foot-scores,
 .gin-rummy-rules {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
+    flex-direction: column;
+    margin: 20px 200px;
+}
+
+.hand-foot-scores {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     flex-direction: column;
     margin: 20px 200px;
 }
